@@ -10,6 +10,21 @@
 const int ROWS = 2;
 const int COLS = 5;
 
+void displayData(int data_array[ROWS][COLS])
+{
+    std::cout << "Test print " << std::endl;
+    for (int r = 0; r < ROWS; r++)
+    {
+        std::cout << "The 2D data array for row " << r + 1 << " is: ";
+        for (int c = 0; c < COLS; c++)
+        {
+            std::cout<< data_array[r][c] << " ";
+        }
+        //Put a newline between print outs
+        std::cout << "\n";
+    }
+}
+
 int getTotal(int arr[ROWS][COLS]) {
     int total = 0;
     for(int r = 0; r < ROWS; r++) {
@@ -99,6 +114,7 @@ int main()
     std::cout << "Column Total (Column 1): " << getColumnTotal(arr, 1) << std::endl;
     std::cout << "Highest in Row 0: " << getHighestInRow(arr, 0) << std::endl;
     std::cout << "Lowest in Row 0: " << getLowestInRow(arr, 0) << std::endl;
+    displayData(arr);
     
     return 0;
 

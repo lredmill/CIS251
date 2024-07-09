@@ -12,10 +12,9 @@ const int COLS = 5;
 
 void displayData(int data_array[ROWS][COLS])
 {
-    std::cout << "Test print " << std::endl;
     for (int r = 0; r < ROWS; r++)
     {
-        std::cout << "The 2D data array for row " << r + 1 << " is: ";
+        std::cout << "The data array for row " << r + 1 << " is: ";
         for (int c = 0; c < COLS; c++)
         {
             std::cout<< data_array[r][c] << " ";
